@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AIService {
+    rpc AnalyzeText (TextRequest) returns (TextResponse);
+}
+
+message TextRequest {
+    string text = 1;
+}
+
+message TextResponse {
+    string sentiment = 1;
+    string keywords = 2;
+}
